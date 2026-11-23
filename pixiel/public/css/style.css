@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'strejen';
+    src: url(/public/fonts/AA\ Strejen.otf);
+}
+
+@font-face {
+    font-family: 'synkopy';
+    src: url(/public/fonts/Synkopy-Flipside.otf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    background: #0F0E10;
+    overflow: hidden;
+}
+
+.headerPlaceholderClass {
+    width: 47px;
+    height: 43px;
+}
+
+.movingLogoClass {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 120px;
+    line-height: 1;
+    white-space: nowrap;
+    transform-origin: top left;
+    will-change: transform;
+    z-index: 200;
+    font-family: 'synkopy';
+    color: #C1F900;
+}
+
+.logoColor {
+    color: #F30F7D;
+}
+
+.movingLogoClass.is-pinned {
+    z-index: 201;
+}
+
+.heroTrackClass {
+    height: 300vh;
+    position: relative;
+}
+
+.heroSticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.heroBg {
+    position: absolute;
+    inset: 0;
+    background-image: url(/public/img/indexHeroBG.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.heroContent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.slide.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.decorLayer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.decorLayer--persist .decor {
+    will-change: transform;
+}
+
+.decorLayer--fade .decor {
+    will-change: transform, opacity;
+}
+
+.decor-a1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 543px;
+    height: 543px;
+    transform-origin: left center;
+}
+
+.decor-a1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.heroSection {
+    min-height: 80vh;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.heroSection.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+nav {
+    font-family: 'strejen';
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: #EDEDED;
+    text-decoration: none;
+}
+
+.nav-link.is-active .nav-label {
+    color: #C1F900;
+}
+
+.navBlock {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.scrollProgress {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 0%;
+    background: #C1F900;
+    transition: width 0.05s linear;
+    pointer-events: none;
+}

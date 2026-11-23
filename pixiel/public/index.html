@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIXIEL</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="headerPlaceholderClass" id="headerPlaceholder"></div>
+        <nav>
+            <div class="navBlock">
+                <a href="index.html" class="nav-link is-active">
+                    [ <span class="nav-label">ГЛАВНАЯ</span> ]
+                </a>
+                <a href="services.html" class="nav-link">
+                    [ <span class="nav-label">УСЛУГИ</span> ]
+                </a>
+            </div>
+            <div class="navBlock">
+                <a href="about.html" class="nav-link">
+                    [ <span class="nav-label">О НАС</span> ]
+                </a>
+                <a href="contacts.html" class="nav-link">
+                    [ <span class="nav-label">КОНТАКТЫ</span> ]
+                </a>
+            </div>
+        </nav>
+        <div class="scrollProgress" id="scrollProgress"></div>
+    </header>
+
+    <main>
+        <div class="movingLogoClass" id="movingLogo">PIXIE<span class="logoColor">L</span></div>
+
+        <div class="heroTrackClass" id="heroTrack">
+            <div class="heroSticky">
+                <div class="heroBg"></div>
+                <div class="heroContent">
+
+                    <div class="decorLayer decorLayer--persist">
+                        <div class="decor decor-a1">
+                            <img src="img/logo.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="decorLayer decorLayer--fade">
+                        <div class="decor decor-b1"></div>
+                    </div>
+
+                    <div class="slide" data-slide="0"></div>
+                    <div class="slide" data-slide="1">
+                        <h1>Твоя голова - твои правила</h1>
+                        <p>текст</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <section class="heroSection"></section>
+    </main>
+
+    <footer></footer>
+
+    <script src="js/heroScroll.js"></script>
+    <script src="js/scroll.js"></script>
+</body>
+</html>
