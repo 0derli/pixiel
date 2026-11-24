@@ -6,65 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PIXIEL</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
 </head>
 <body>
-    <header>
-        <div class="headerPlaceholderClass" id="headerPlaceholder"></div>
-        <nav>
-            <div class="navBlock">
-                <a href="index.html" class="nav-link is-active">
-                    [ <span class="nav-label">ГЛАВНАЯ</span> ]
-                </a>
-                <a href="services.html" class="nav-link">
-                    [ <span class="nav-label">УСЛУГИ</span> ]
-                </a>
-            </div>
-            <div class="navBlock">
-                <a href="about.html" class="nav-link">
-                    [ <span class="nav-label">О НАС</span> ]
-                </a>
-                <a href="contacts.html" class="nav-link">
-                    [ <span class="nav-label">КОНТАКТЫ</span> ]
-                </a>
-            </div>
-        </nav>
-        <div class="scrollProgress" id="scrollProgress"></div>
-    </header>
+    <div class="blend-root">
+        <header>
+            <div class="headerPlaceholderClass" id="headerPlaceholder"></div>
+            <nav>
+                <div class="navBlock">
+                    <a href="index.html" class="nav-link is-active">
+                        [ <span class="nav-label">ГЛАВНАЯ</span> ]
+                    </a>
+                    <a href="services.html" class="nav-link">
+                        [ <span class="nav-label">УСЛУГИ</span> ]
+                    </a>
+                </div>
+                <div class="navBlock">
+                    <a href="about.html" class="nav-link">
+                        [ <span class="nav-label">О НАС</span> ]
+                    </a>
+                    <a href="contacts.html" class="nav-link">
+                        [ <span class="nav-label">КОНТАКТЫ</span> ]
+                    </a>
+                </div>
+            </nav>
+            <div class="scrollProgress" id="scrollProgress"></div>
+        </header>
 
-    <main>
-        <div class="movingLogoClass" id="movingLogo">PIXIE<span class="logoColor">L</span></div>
+        <main>
+            <div class="movingLogoClass" id="movingLogo">PIXIE<span class="logoColor">L</span></div>
 
-        <div class="heroTrackClass" id="heroTrack">
-            <div class="heroSticky">
-                <div class="heroBg"></div>
-                <div class="heroContent">
+            <div class="heroTrackClass" id="heroTrack">
+                <div class="heroSticky">
+                    <div class="heroBg"></div>
+                    <div class="heroContent">
 
-                    <div class="decorLayer decorLayer--persist">
-                        <div class="decor decor-a1">
-                            <img src="img/logo.png" alt="">
+                        <div class="decorLayer decorLayer--persist">
+                            <div class="decor decor-a1">
+                                <img src="img/logo.png" alt="">
+                            </div>
+                            <div class="decor decor-a2">
+                                <img src="img/Explosion.png" alt="">
+                            </div>
+                            <div class="decor decor-a3">
+                                <p>Цвет без цензуры. Стиль без шаблонов.</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="decorLayer decorLayer--fade">
-                        <div class="decor decor-b1"></div>
-                    </div>
+                        <div class="decorLayer decorLayer--fade">
+                            <div class="decor decor-b1"></div>
+                        </div>
 
-                    <div class="slide" data-slide="0"></div>
-                    <div class="slide" data-slide="1">
-                        <h1>Твоя голова - твои правила</h1>
-                        <p>текст</p>
-                    </div>
+                        <div class="slide" data-slide="0"></div>
+                        <div class="slide" data-slide="1">
+                            <h1 id="indexHeroTitle">
+                                <span class="line-left">Твоя голова -</span>
+                                <span class="line-right">твои правила</span>
+                            </h1>
+                            <p id="indexHeroText">Никаких скучных и навязчивых трендов. Только чистый цвет, дерзкая геометрия и твое полное самоуправление. Создай свой образ в салоне <span>ПИКСЕЛЬ</span>.</p>
+                        </div>
 
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="carousel">
+                <div class="carousel-track" id="carouselTrack"></div>
+            </div>
+            <section class="philosophySection">
+                <div>
+                    <img id="philosophySectionLine" src="img/sectionLine.png" alt="">
+                    <h2>[ Наша философия ]</h2>
+                    <p>Ты сам решаешь, как тебе выглядеть. Мы не диктуем тренды и не спорим с твоим вкусом — мы помогаем воплотить его точно.<br><br>
+                        «Пиксель» — про свободу в деталях: длина, цвет, текстура, настроение. Без «правильно» и «как у всех».<br><br>
+                        Только твой образ — собранный вместе с тобой.</p>
+                        <img src="img/Image.png" alt="">
+                        <img id="polygon" src="img/Polygon 1.png" alt="">
+                </div>
+            </section>
+        </main>
 
-        <section class="heroSection"></section>
-    </main>
-
-    <footer></footer>
+        <footer></footer>
+    </div>
 
     <script src="js/heroScroll.js"></script>
     <script src="js/scroll.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>

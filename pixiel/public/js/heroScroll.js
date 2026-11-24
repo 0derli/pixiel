@@ -60,33 +60,70 @@ document.addEventListener('DOMContentLoaded', () => {
 
         decorPersist.forEach(el => {
             if (el.classList.contains('decor-a1')) {
-                el._startX = logoLeftInContent - 335 - 17;
-                el._startY = logoCenterYInContent - 335 / 2 - 116;
-                el._endX   = 30 - contentRect.left;
-                el._endY   = logoCenterYInContent - 543 / 2;
-                el._startS = 335 / 543;
+                el._startX  = logoLeftInContent - 335 - 17;
+                el._startY  = logoCenterYInContent - 335 / 2 - 116;
+                el._endX    = 30 - contentRect.left + 100;
+                el._endY    = logoCenterYInContent - 543 / 2;
+                el._startS  = 335 / 543;
+                el._endS    = 1;
+                el._startR  = 0;
+                el._endR    = 0;
+                el._startP  = 0;
+                el._endP    = 1;
+
+            } else if (el.classList.contains('decor-a2')) {
+                el._startX  = logoLeftInContent + logoW - 530;
+                el._startY  = logoCenterYInContent - 200 / 2;
+                el._endX    = logoLeftInContent + logoW - 890 + 100;
+                el._endY    = logoCenterYInContent - 120 / 2;
+                el._startS  = 1;
+                el._endS    = 2;
+                el._startR  = 0;
+                el._endR    = 0;
+                el._startP  = 0;
+                el._endP    = 1;
+
+            } else if (el.classList.contains('decor-a3')) {
+                const decorW = el.offsetWidth;
+                const decorH = el.offsetHeight;
+
+                el._startS = 1;
                 el._endS   = 1;
+
+                el._startX = contentRect.width - decorW - 35;
+                el._startY = contentRect.height * (2 / 3) - decorH / 2;
+                el._endX   = contentRect.width - decorW - 35 + 100;
+                el._endY   = contentRect.height - decorH * el._endS - 30;
+
+                el._startR = -5;
+                el._endR   = 0;
+                el._startP = 0;
+                el._endP   = 1;
             } else {
-                el._startX = parseFloat(el.dataset.startX)     || 0;
-                el._startY = parseFloat(el.dataset.startY)     || 0;
-                el._startS = parseFloat(el.dataset.startScale) || 1;
-                el._endX   = parseFloat(el.dataset.endX)       || 0;
-                el._endY   = parseFloat(el.dataset.endY)       || 0;
-                el._endS   = parseFloat(el.dataset.endScale)   || 1;
+                el._startX  = parseFloat(el.dataset.startX)     || 0;
+                el._startY  = parseFloat(el.dataset.startY)     || 0;
+                el._startS  = parseFloat(el.dataset.startScale) || 1;
+                el._endX    = parseFloat(el.dataset.endX)       || 0;
+                el._endY    = parseFloat(el.dataset.endY)       || 0;
+                el._endS    = parseFloat(el.dataset.endScale)   || 1;
+                el._startR  = parseFloat(el.dataset.startRotate) || 0;
+                el._endR    = parseFloat(el.dataset.endRotate)   || 0;
+                el._startP  = parseFloat(el.dataset.startP)     || 0;
+                el._endP    = parseFloat(el.dataset.endP)       || 1;
             }
-            el._startP = parseFloat(el.dataset.startP) || 0;
-            el._endP   = parseFloat(el.dataset.endP)   || 1;
         });
 
         decorFade.forEach(el => {
-            el._startX = parseFloat(el.dataset.startX)     || 0;
-            el._startY = parseFloat(el.dataset.startY)     || 0;
-            el._startS = parseFloat(el.dataset.startScale) || 1;
-            el._endX   = parseFloat(el.dataset.endX)       || 0;
-            el._endY   = parseFloat(el.dataset.endY)       || 0;
-            el._endS   = parseFloat(el.dataset.endScale)   || 1;
-            el._startP = parseFloat(el.dataset.startP)     || 0;
-            el._endP   = parseFloat(el.dataset.endP)       || 1;
+            el._startX  = parseFloat(el.dataset.startX)     || 0;
+            el._startY  = parseFloat(el.dataset.startY)     || 0;
+            el._startS  = parseFloat(el.dataset.startScale) || 1;
+            el._endX    = parseFloat(el.dataset.endX)       || 0;
+            el._endY    = parseFloat(el.dataset.endY)       || 0;
+            el._endS    = parseFloat(el.dataset.endScale)   || 1;
+            el._startR  = parseFloat(el.dataset.startRotate) || 0;
+            el._endR    = parseFloat(el.dataset.endRotate)   || 0;
+            el._startP  = parseFloat(el.dataset.startP)     || 0;
+            el._endP    = parseFloat(el.dataset.endP)       || 1;
         });
     }
 
@@ -116,7 +153,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const tx = lerp(el._startX, el._endX, k);
             const ty = lerp(el._startY, el._endY, k);
             const sc = lerp(el._startS, el._endS, k);
-            el.style.transform = `translate3d(${tx}px, ${ty}px, 0) scale(${sc})`;
+            const rt = lerp(el._startR, el._endR, k);
+            el.style.transform = `translate3d(${tx}px, ${ty}px, 0) scale(${sc}) rotate(${rt}deg)`;
         });
 
         decorFade.forEach(el => {
@@ -124,7 +162,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const tx = lerp(el._startX, el._endX, k);
             const ty = lerp(el._startY, el._endY, k);
             const sc = lerp(el._startS, el._endS, k);
-            el.style.transform = `translate3d(${tx}px, ${ty}px, 0) scale(${sc})`;
+            const rt = lerp(el._startR, el._endR, k);
+            el.style.transform = `translate3d(${tx}px, ${ty}px, 0) scale(${sc}) rotate(${rt}deg)`;
             el.style.opacity = String(1 - k);
         });
 

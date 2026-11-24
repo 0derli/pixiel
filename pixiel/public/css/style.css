@@ -8,10 +8,38 @@
     src: url(/public/fonts/Synkopy-Flipside.otf);
 }
 
+@font-face {
+    font-family: 'denistina';
+    src: url(/public/fonts/denistina_en.ttf);
+}
+
+@font-face {
+    font-family: 'montserrat-regular';
+    src: url(/public/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'guano';
+    src: url(/public/fonts/Guano\ Apes\ \(Rus\ by\ sherbackoffalex\).otf);
+}
+
+@font-face {
+    font-family: 'leropid-italic';
+    src: url(/public/fonts/Leporid-Italic.otf);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0F0E10;  
 }
 
 header {
@@ -173,4 +201,142 @@ nav {
     background: #C1F900;
     transition: width 0.05s linear;
     pointer-events: none;
+}
+
+.decor-a2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    transform-origin: center center;
+    z-index: -1;
+}
+
+.decor-a2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.decor-a3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'denistina';
+    color: #FFFFFF;
+    font-size: 48px;
+}
+
+#indexHeroTitle {
+    position: relative;
+    top: 200px;
+    margin-left: auto;
+    margin-right: 200px;
+    color: #C1F900;
+    font-size: 95px;
+    font-family: 'guano';
+    width: 813px;
+    display: flex;
+    flex-direction: column;
+}
+
+.line-left {
+    display: block;
+    text-align: left;
+    align-self: flex-start;
+}
+
+.line-right {
+    display: block;
+    text-align: right;
+    align-self: flex-end;
+}
+
+#indexHeroText {
+    position: relative;
+    top: 280px;
+    margin-left: auto;
+    margin-right: 175px;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-family: 'montserrat-regular';
+    width: 825px;
+    background-color: #0F0E10;
+    line-height: 50px;
+    padding: 12px 40px;
+    border-left: 9px #F30F7D solid;
+    border-bottom: 9px #F30F7D solid;
+}
+
+.carousel {
+    width: 100%;
+    height: 120px;
+    background-color: #0F0E10;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    white-space: nowrap;
+    will-change: transform;
+}
+
+.carousel-item {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.carousel-word {
+    flex-shrink: 0;
+    color: #C1F900;
+    font-size: 32px;
+    font-family: 'leropid-italic';
+}
+
+.carousel-sep {
+    width: 20px;
+    height: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+#philosophySectionLine {
+    width: 100%;
+}
+
+.philosophySection {
+    position: relative;
+}
+
+.philosophySection h2 {
+    color: #C1F900;
+    font-size: 47.53px;
+    font-family: 'leropid-italic';
+    position: relative;
+    margin-top: 90px;
+    left: 80px;
+}
+
+.philosophySection p {
+    color: #EDEDED;
+    font-family: 'montserrat-regular';
+    font-size: 32px;
+    width: 657px;
+    position: relative;
+    top: 64px;
+    left: 80px;
+    line-height: 50px;
+    margin-bottom: 245px;
+}
+
+#polygon {
+    position: absolute;
 }
