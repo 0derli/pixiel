@@ -28,6 +28,16 @@
     src: url(/public/fonts/Leporid-Italic.otf);
 }
 
+@font-face {
+    font-family: 'leropid-regular';
+    src: url(/public/fonts/Leporid-Regular.otf);
+}
+
+@font-face {
+    font-family: 'hastoe';
+    src: url(/public/fonts/hastoe.ttf);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -39,7 +49,7 @@ html {
 }
 
 body {
-    background: #0F0E10;  
+    background: #0F0E10;
 }
 
 header {
@@ -53,6 +63,7 @@ header {
     align-items: center;
     background: #0F0E10;
     overflow: hidden;
+    width: 100%;
 }
 
 .headerPlaceholderClass {
@@ -233,11 +244,11 @@ nav {
     position: relative;
     top: 200px;
     margin-left: auto;
-    margin-right: 200px;
+    margin-right: min(200px, 8vw);
     color: #C1F900;
-    font-size: 95px;
+    font-size: clamp(40px, 7vw, 95px);
     font-family: 'guano';
-    width: 813px;
+    width: min(813px, 100% - 16vw);
     display: flex;
     flex-direction: column;
 }
@@ -284,6 +295,7 @@ nav {
     height: 100%;
     white-space: nowrap;
     will-change: transform;
+    width: max-content;
 }
 
 .carousel-item {
@@ -334,9 +346,352 @@ nav {
     top: 64px;
     left: 80px;
     line-height: 50px;
-    margin-bottom: 245px;
 }
 
 #polygon {
     position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+}
+
+#philosophySectionImg {
+    position: absolute;
+    bottom: 124px;
+    left: 60%;
+    z-index: -1;
+}
+
+.philosophySectionContent {
+    padding-bottom: 245px;
+    height: auto;
+}
+
+.hoverLink {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 474 / 315;
+    overflow: hidden;
+}
+
+.hoverImg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.hoverImg--hover {
+    opacity: 0;
+}
+
+.hoverLink:hover .hoverImg--hover {
+    opacity: 1;
+}
+
+.hoverLink:hover .hoverImg--default {
+    opacity: 0;
+}
+
+.imgLinks {
+    margin-top: 50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+    padding: 0 3vw;
+}
+
+.works h2 {
+    font-size: 69.61px;
+    color: #FFFFFF;
+    font-family: 'leropid-italic';
+    margin-top: 44px;
+    display: flex;
+    justify-content: center;
+}
+
+.exampleRow1 {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.exampleColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.exampleRow2 {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.exampleClass {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 55px;
+}
+
+.works {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.exampleClass p {
+    color: #FFFFFF;
+    font-size: 43.36px;
+    font-family: 'denistina';
+    display: flex;
+    justify-content: center;
+}
+
+.masterTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 55px;
+}
+
+.masterTitle img {
+    flex: 1 1 33.333%;
+    min-width: 0;
+    width: 33.333%;
+    height: 51px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.masterTitle h2 {
+    min-width: 0;
+    text-align: center;
+    margin: 0;
+    white-space: nowrap;
+    font-size: 79.25px;
+    color: #FFFFFF;
+    font-family: 'leropid-italic';
+}
+
+.masters {
+    display: flex;
+    justify-content: center;
+    gap: 85px;
+    margin-top: 80px;
+    padding: 0 40px;
+    margin-bottom: 100px;
+}
+
+.masterCard img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.masterCard:hover img {
+    filter: grayscale(0%);
+}
+
+.masters h3 {
+    font-family: 'leropid-regular';
+    font-size: 32px;
+    color: #FFFFFF;
+}
+
+.masterCard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1 1 0;
+    max-width: 400px;
+    min-width: 0;
+}
+
+.masterCard p {
+    font-family: 'montserrat-regular';
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+#lineContact {
+    width: 100%;
+}
+
+.contactsSection h2 {
+    font-family: 'leropid-regular';
+    font-size: 67.03px;
+    color: #A9FA00;
+    margin-top: 70px;
+    margin-left: 80px;
+}
+
+.contactsContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 97px;
+    margin-top: 65px;
+}
+
+.contactRow {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    justify-content: space-between;
+}
+
+.contactRow h3 {
+    color: #FFFFFF;
+    font-size: 39px;
+    font-family: 'montserrat-regular';
+    font-style: inherit;
+}
+
+.contactColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+}
+
+.contactRow p {
+    color: #EDEDED;
+    font-size: 39px;
+    font-family: 'montserrat-regular';
+}
+
+.gta-map-frame {
+    position: relative;
+    width: 624px;
+    max-width: 100%;
+    padding: 5px;
+    background: #080808;
+    border: 2px solid #080808;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.gta-map-top {
+    height: 30px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #080808;
+    color: #fff;
+    font: 10px monospace;
+    letter-spacing: 1px;
+}
+
+.gps-status {
+    color: #36df55;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 5px;
+    background: #36df55;
+    border-radius: 50%;
+    box-shadow: 0 0 7px #36df55;
+}
+
+#gtaMap {
+    width: 100%;
+    height: 288px;
+    background: #24272b;
+    z-index: 1;
+}
+
+.map-compass {
+    position: absolute;
+    z-index: 500;
+    top: 42px;
+    right: 14px;
+    width: 27px;
+    height: 27px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #080808;
+    border: 2px solid white;
+    color: white;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.map-bottom {
+    height: 28px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #080808;
+    color: #aaa;
+    font: 9px monospace;
+    letter-spacing: 1px;
+}
+
+.business-marker {
+    color: white;
+    font-size: 29px;
+    font-weight: 900;
+    text-shadow:
+        -2px -2px #000,
+        2px -2px #000,
+        -2px 2px #000,
+        2px 2px #000;
+    filter: drop-shadow(0 0 4px #fff);
+}
+
+.gta-map-frame .leaflet-control-zoom a {
+    background: #080808 !important;
+    color: white !important;
+    border-color: #444 !important;
+}
+
+.gta-map-frame .leaflet-control-zoom a:hover {
+    background: #36df55 !important;
+    color: #000 !important;
+}
+
+.gta-map-frame .leaflet-popup-content-wrapper,
+.gta-map-frame .leaflet-popup-tip {
+  background: #111;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 2px;
+}
+
+.gta-map-frame .leaflet-popup-content {
+  font: 12px monospace;
+}
+
+#gtaMap .leaflet-tile {
+    filter: grayscale(1) invert(0.88) hue-rotate(180deg) brightness(0.85) contrast(1.15);
+}
+
+.contactsSection {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+
+footer img {
+    width: 100%;
+    height: 375px;
+    object-fit: cover;
+    display: block;
 }

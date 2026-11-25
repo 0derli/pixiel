@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const words = ['СМЕЛО', 'ГРОМКО', 'ЯРКО', 'ТВОЙ ВАЙБ', 'БЕЗ РАМОК', 'ГРУБО', 'ИНАЧЕ', 'ВЫЗОВ', 'РЕШАЙ', 'НЕОН', 'ПИКСЕЛЬ', 'ВЫХОД', 'ВЕРА'];
 
+    const SPEED = 60;  
+
     function buildItems() {
         words.forEach(word => {
             const item = document.createElement('div');
@@ -24,45 +26,52 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    buildItems();
-
-    let offset = 0;
-    let speed  = 1;
-    let halfWidth = 0;
-    let rafId;
-
-    function measureWidth() {
-        halfWidth = track.scrollWidth / 2;
-    }
-
-    function loop() {
-        offset -= speed;
-        if (halfWidth > 0 && Math.abs(offset) >= halfWidth) {
-            offset += halfWidth;
-        }
-        track.style.transform = `translate3d(${offset}px, 0, 0)`;
-        rafId = requestAnimationFrame(loop);
-    }
-
     function duplicateForLoop() {
         const originalChildren = Array.from(track.children);
         originalChildren.forEach(child => {
             track.appendChild(child.cloneNode(true));
         });
-        measureWidth();
     }
 
-    duplicateForLoop();
+    let offset = 0;
+    let halfWidth = 0;
+    let lastTime = 0;
 
-    if (document.fonts && document.fonts.ready) {
-        document.fonts.ready.then(() => {
-            track.innerHTML = '';
-            buildItems();
-            duplicateForLoop();
-        });
+    function measureWidth() {
+        halfWidth = track.scrollWidth / 2;
+    }
+
+    function loop(now) {
+        if (!lastTime) lastTime = now;
+        const dt = (now - lastTime) / 1000;
+        lastTime = now;
+
+        offset -= SPEED * dt;
+
+        if (halfWidth > 0) {
+            offset = offset % halfWidth;
+            if (offset > 0) offset -= halfWidth;
+        }
+
+        track.style.transform = `translate3d(${offset}px, 0, 0)`;
+        requestAnimationFrame(loop);
+    }
+
+    function init() {
+        track.innerHTML = '';
+        buildItems();
+        duplicateForLoop();
+        measureWidth();
+        offset = 0;
+        lastTime = 0;
+        requestAnimationFrame(loop);
     }
 
     window.addEventListener('resize', measureWidth);
 
-    loop();
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(init);
+    } else {
+        init();
+    }
 });

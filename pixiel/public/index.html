@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,12 @@
     <title>PIXIEL</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
 </head>
+
 <body>
     <div class="blend-root">
         <header>
@@ -63,7 +69,9 @@
                                 <span class="line-left">Твоя голова -</span>
                                 <span class="line-right">твои правила</span>
                             </h1>
-                            <p id="indexHeroText">Никаких скучных и навязчивых трендов. Только чистый цвет, дерзкая геометрия и твое полное самоуправление. Создай свой образ в салоне <span>ПИКСЕЛЬ</span>.</p>
+                            <p id="indexHeroText">Никаких скучных и навязчивых трендов. Только чистый цвет, дерзкая
+                                геометрия и твое полное самоуправление. Создай свой образ в салоне <span>ПИКСЕЛЬ</span>.
+                            </p>
                         </div>
 
                     </div>
@@ -73,23 +81,137 @@
                 <div class="carousel-track" id="carouselTrack"></div>
             </div>
             <section class="philosophySection">
-                <div>
+                <div class="philosophySectionContent">
                     <img id="philosophySectionLine" src="img/sectionLine.png" alt="">
                     <h2>[ Наша философия ]</h2>
-                    <p>Ты сам решаешь, как тебе выглядеть. Мы не диктуем тренды и не спорим с твоим вкусом — мы помогаем воплотить его точно.<br><br>
-                        «Пиксель» — про свободу в деталях: длина, цвет, текстура, настроение. Без «правильно» и «как у всех».<br><br>
+                    <p>Ты сам решаешь, как тебе выглядеть. Мы не диктуем тренды и не спорим с твоим вкусом — мы помогаем
+                        воплотить его точно.<br><br>
+                        «Пиксель» — про свободу в деталях: длина, цвет, текстура, настроение. Без «правильно» и «как у
+                        всех».<br><br>
                         Только твой образ — собранный вместе с тобой.</p>
-                        <img src="img/Image.png" alt="">
-                        <img id="polygon" src="img/Polygon 1.png" alt="">
+
+                </div>
+                <img id="philosophySectionImg" src="img/Image.png" alt="">
+                <img id="polygon" src="img/Polygon 1.png" alt="">
+            </section>
+            <div class="imgLinks">
+                <a href="services.html" class="hoverLink">
+                    <img class="hoverImg hoverImg--default" src="img/imgLink1.png" alt="Стрижки">
+                    <img class="hoverImg hoverImg--hover" src="img/hoverLink1.png" alt="">
+                </a>
+                <a href="services.html" class="hoverLink">
+                    <img class="hoverImg hoverImg--default" src="img/imgLink2.png" alt="Окрашивания">
+                    <img class="hoverImg hoverImg--hover" src="img/hoverLink2.png" alt="">
+                </a>
+                <a href="services.html" class="hoverLink">
+                    <img class="hoverImg hoverImg--default" src="img/imgLink3.png" alt="Стрижки">
+                    <img class="hoverImg hoverImg--hover" src="img/hoverLink3.png" alt="">
+                </a>
+            </div>
+            <section class="works">
+                <h2>Наши работы</h2>
+                <div class="exampleClass">
+                    <div class="exampleRow1">
+                        <img src="img/example1.png" alt="">
+                        <div class="exampleColumn">
+                            <img src="img/example2.png" alt="">
+                            <img src="img/example3.png" alt="">
+                        </div>
+                        <img src="img/example4.png" alt="">
+                    </div>
+                    <div class="exampleRow2">
+                        <img src="img/example5.png" alt="">
+                        <img src="img/example6.png" alt="">
+                        <img src="img/example7.png" alt="">
+                        <img src="img/example8.png" alt="">
+                    </div>
+                    <p>Каждая работа - чье-то решение.Вот как это выглядит.</p>
+                </div>
+            </section>
+            <section class="masterSection">
+                <div class="masterTitle">
+                    <img src="img/masterLine.png" alt="">
+                    <h2>мастера</h2>
+                    <img src="img/masterLine.png" alt="">
+                </div>
+                <div class="masters">
+                    <div class="masterCard">
+                        <img src="img/master1.png">
+                        <h3>Дмитрий Попов</h3>
+                        <p>Старший мастер - стрижки и эксперименты <br><br>
+                            “Приходи с идеей - доведем до формы”
+                        </p>
+                    </div>
+                    <div class="masterCard">
+                        <img src="img/master2.png">
+                        <h3>Ева Матвеева</h3>
+                        <p>Мастер окрашивания - цвет как конструктор <br><br>
+                            “От натурального до смелого”
+                        </p>
+                    </div>
+                    <div class="masterCard">
+                        <img src="img/master3.png">
+                        <h3>Вероника Ковалева</h3>
+                        <p>Мастер стрижек и ухода - форма, которая носится легко <br><br>
+                            “Аккуратно, но с харакетром”
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <img id="lineContact" src="img/caution.png" alt="">
+            <section class="contactsSection">
+                
+                <h2>контакты</h2>
+                <div class="contactsContent">
+                    <div class="contactColumn">
+                        <div class="contactRow">
+                            <h3>Адрес</h3>
+                            <p>Новая ул., д. 24</p>
+                        </div>
+                        <div class="contactRow">
+                            <h3>Часы</h3>
+                            <p>Пн–Вс, 11:00–21:00</p>
+                        </div>
+                        <div class="contactRow">
+                            <h3>Телефон</h3>
+                            <p>+7 (495) 123-45-67</p>
+                        </div>
+                        <div class="contactRow">
+                            <h3>Telegram</h3>
+                            <p>@pixel_salon</p>
+                        </div>
+                    </div>
+                    <div class="gta-map-frame">
+                        <div class="gta-map-top">
+                          <span>GPS // BUSINESS LOCATION</span>
+                          <span class="gps-status">
+                            <span class="status-dot"></span>
+                            GPS ONLINE
+                          </span>
+                        </div>
+                      
+                        <div id="gtaMap"></div>
+                      
+                        <div class="map-compass">N</div>
+                      
+                        <div class="map-bottom">
+                          <span>ORENBURG, CHKALOVA ST. 11</span>
+                          <span>LOCATION_01</span>
+                        </div>
+                      </div>
                 </div>
             </section>
         </main>
-
-        <footer></footer>
+        <footer>
+            <img src="img/footerIndex.png" alt="">
+        </footer>
     </div>
 
     <script src="js/heroScroll.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/carousel.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/map.js"></script>
 </body>
+
 </html>
