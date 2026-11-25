@@ -694,4 +694,29 @@ footer img {
     height: 375px;
     object-fit: cover;
     display: block;
+    
+}
+
+.footer-wrap {
+    position: relative;
+    display: grid;
+    width: 100%;
+}
+
+.footer-wrap > * {
+    grid-area: 1 / 1;
+}
+
+#footerTitle {
+    font-size: 18vw;
+    line-height: 0.95;
+    text-align: center;
+    white-space: nowrap;
+    font-family: 'hastoe';
+    color: #F30F7D;
+    margin: 0;
+    z-index: 2;
+    align-self: end;
+    justify-self: center;
+    transform: translateY(50%);
 }
