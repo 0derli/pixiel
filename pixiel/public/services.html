@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIXIEL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <div class="blend-root">
+        <header>
+            <div class="headerPlaceholderClass" id="headerPlaceholder"></div>
+            <nav>
+                <div class="navBlock">
+                    <a href="index.html" class="nav-link">
+                        [ <span class="nav-label">ГЛАВНАЯ</span> ]
+                    </a>
+                    <a href="services.html" class="nav-link is-active">
+                        [ <span class="nav-label">УСЛУГИ</span> ]
+                    </a>
+                </div>
+                <div class="navBlock">
+                    <a href="about.html" class="nav-link">
+                        [ <span class="nav-label">О НАС</span> ]
+                    </a>
+                    <a href="contacts.html" class="nav-link">
+                        [ <span class="nav-label">КОНТАКТЫ</span> ]
+                    </a>
+                </div>
+            </nav>
+            <div class="scrollProgress" id="scrollProgress"></div>
+        </header>
+        <main>
+            <section class="heroServices">
+                <h1>Услуги</h1>
+            </section>
+            <section class="servicesSection">
+                <div class="filterMenu">
+                    <ul class="filterList">
+                        <li>
+                            <button class="filter-btn is-active" type="button" data-filter="all">ВСЕ</button>
+                        </li>
+                        <li>
+                            <button class="filter-btn" type="button" data-filter="strizhki">СТРИЖКИ</button>
+                        </li>
+                        <li>
+                            <button class="filter-btn" type="button" data-filter="okrashivanie">ОКРАШИВАНИЕ</button>
+                        </li>
+                        <li>
+                            <button class="filter-btn" type="button" data-filter="combo">КОМБО</button>
+                        </li>
+                        <li>
+                            <button class="filter-btn" type="button" data-filter="care">УХОД И ВОССТАНОВЛЕНИЕ</button>
+                        </li>
+                        <li>
+                            <button class="filter-btn" type="button" data-filter="experiments">ЭКСПЕРИМЕНТЫ</button>
+                        </li>
+                        <li>
+                            <button class="filter-btn" type="button" data-filter="consultation">КОНСУЛЬТАЦИЯ</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="servicesList">
+                    <a href="" class="serviceCard" data-category="strizhki">
+                        <img src="img/services/designerHaircut.png" alt="Авторская стрижка">
+                        <h3>Авторская стрижка</h3>
+                        <p>от 2 500 ₽</p>
+                    </a>
+                    <a href="" class="serviceCard" data-category="strizhki">
+                        <img src="img/services/unconventionalHaircut.png" alt="Неформатная стрижка">
+                        <h3>Неформатная стрижка</h3>
+                        <p>от 3 500 ₽</p>
+                    </a>
+                    <a href="" class="serviceCard" data-category="okrashivanie">
+                        <img src="img/services/neonColoring.png" alt="Яркий цвет">
+                        <h3>Яркий цвет</h3>
+                        <p>от 4 500 ₽</p>
+                    </a>
+                    <a href="" class="serviceCard" data-category="okrashivanie">
+                        <img src="img/services/hiddenColoring.png" alt="Скрытый цвет">
+                        <h3>Скрытый цвет</h3>
+                        <p>от 5 000 ₽</p>
+                    </a>
+                    <a href="" class="serviceCard" data-category="okrashivanie">
+                        <img src="img/services/pastelColoring.png" alt="Пастель">
+                        <h3>Пастель</h3>
+                        <p>от 3 500 ₽</p>
+                    </a>
+                    <a href="" class="serviceCard" data-category="combo">
+                        <img src="img/services/haircutColoring.png" alt="Стрижка + окрашивание">
+                        <h3>Стрижка + окрашивание</h3>
+                        <p>от 6 500 ₽</p>
+                    </a>
+                    <a href="" class="serviceCard" data-category="combo">
+                        <img src="img/services/haircutHiddenColoring.png" alt="Стрижка + скрытый цвет">
+                        <h3>Стрижка + скрытый цвет</h3>
+                        <p>от 7 000 ₽</p>
+                    </a>
+                    <a href="" class="serviceCard" data-category="care">
+                        <img src="img/services/hairRestoration.png" alt="Восстановление волос">
+                        <h3>Восстановление волос</h3>
+                        <p>от 3 000 ₽</p>
+                    </a>
+                    <a href="" class="serviceCard" data-category="care">
+                        <img src="img/services/scalpCare.png" alt="Уход за кожей головы">
+                        <h3>Уход за кожей головы</h3>
+                        <p>от 2 000 ₽</p>
+                    </a>
+                    <a href="" class="serviceCard" data-category="experiments">
+                        <img src="img/services/coloredStramd.png" alt="Цветная прядь">
+                        <h3>Цветная прядь</h3>
+                        <p>от 2 500 ₽</p>
+                    </a>
+                    <a href="" class="serviceCard" data-category="experiments">
+                        <img src="img/services/temporaryTexture.png" alt="Временная текстура">
+                        <h3>Временная текстура</h3>
+                        <p>от 2 000 ₽</p>
+                    </a>
+                    <a href="" class="serviceCard" data-category="consultation">
+                        <img src="img/services/hairstyleSelection.png" alt="Разбор образа">
+                        <h3>Разбор образа</h3>
+                        <p>бесплатно при записи / от 500 ₽</p>
+                    </a>
+                    <a href="" class="serviceCard" data-category="consultation">
+                        <img src="img/services/hairCheck.png" alt="Проверка волос">
+                        <h3>Проверка волос</h3>
+                        <p>от 1 000 ₽</p>
+                    </a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-wrap">
+                <img src="img/footerServices.png" alt="">
+                <h3 id="footerTitle">PIXIEL</h3>
+            </div>
+        </footer>
+            </div>
+            <script src="js/scroll.js"></script>
+            <script src="js/filter.js"></script>
+    </div>
+</body>
+</html>
