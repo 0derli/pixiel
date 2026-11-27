@@ -540,7 +540,7 @@ nav {
     margin-left: 80px;
 }
 
-.contactsContent {
+.contactsContentIndex {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1018,4 +1018,225 @@ footer {
     position: absolute;
     right: 10%;
     top: 10%;
+}
+
+.numberSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+.numberSection img {
+    width: 100%;
+    height: auto;
+    clip-path: inset(0 0 50% 0);
+}
+
+.numberSection h2 {
+    font-family: 'montserrat-black';
+    color: #F30F7D;
+    font-size: 45.03px;
+    display: flex;
+    justify-content: center;
+}
+
+.numberSection .counter {
+    font-family: 'montserrat-black';
+    font-size: 128px;
+    color: #FFFFFF;
+    display: inline-block;
+     font-variant-numeric: tabular-nums;
+}
+
+.numberContent div > span:not(.counter) {
+    font-family: 'montserrat-black';
+    font-size: 128px;
+    color: #FFFFFF;
+}
+
+.numberContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 62px;
+    text-align: center;
+}
+
+.numberSection p {
+    color: #C1F900; 
+    font-size: 24px;
+    font-family: 'montserrat-regular';
+    margin-bottom: 100px;
+}
+
+.numberContent > div {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.numberSection.is-visible .numberContent > div {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.heroContacts {
+    background-image: url(/public/img/heroContacts.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 582px;
+    max-height: 582px;
+    padding: 60px 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+.heroContacts h1 {
+    font-size: 107.28px;
+    color: #F30F7D;
+        font-family: 'strejen';
+}
+
+.contactsBlock {
+    overflow: hidden;
+    width: 100%;
+}
+
+.contactsBlock h2 {
+    font-size: 194.18px;
+    color: #C1F900;
+        font-family: 'montserrat-black';
+        position: absolute;
+        left: 10%;
+        overflow-x: hidden;
+}
+
+.contactsContent {
+    background-color: #F30F7D;
+    display: flex;
+    flex-direction: row;
+     width: 80%;
+     padding: 35px 10%;
+     position: relative;
+     left: 12%;
+     margin-top: 143px;
+     justify-content: space-between;
+}
+
+.contactTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    font-size: 39px;
+    font-family: 'montserrat-black';
+      color: #0F0E10;
+}
+
+.contactsContent img {
+    position: absolute;
+    height: 100%;
+    margin: 0 auto;
+    width: auto;
+    inset: 0;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    font-size: 39px;
+    font-family: 'montserrat-black';
+      color: #0F0E10;
+}
+
+.formSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    margin-top: 90px;
+    width: 100%; 
+}
+
+.formSection h2 {
+    font-size: 32px;
+    color: #C1F900;
+    font-family: 'strejen';
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 37px;
+    width: 100%; 
+    max-width: 1157px; 
+    margin-top: 50px;
+}
+
+input, select {
+    height: 95px;
+    width: 100%; 
+    border-radius: 0;
+    background-color: #000000;
+    border: 3px solid #C1F900;
+    padding: 0 48px; 
+    box-sizing: border-box;
+    line-height: 89px; 
+    font-size: 32px;
+    color: #FFFFFF; 
+    font-family: 'montserrat-regular';
+    outline: none;
+}
+
+input::placeholder {
+    color: #EDEDED;
+    font-family: 'montserrat-regular';
+    font-size: 32px;
+    opacity: 1; 
+    text-align: start; 
+}
+
+button {
+    height: 95px;
+    width: 100%;
+    max-width: 1157px;
+    background-color: #C1F900;
+    color: #000000;
+    border: none;
+    font-size: 32px;
+    font-family: 'strejen';
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+select {
+    appearance: none;       
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 48px center; 
+    background-size: 32px;                  
+    
+    padding-right: 100px; 
+    cursor: pointer;
+}
+
+select option {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'montserrat-regular';
+    font-size: 32px;
+    padding: 10px;
 }
