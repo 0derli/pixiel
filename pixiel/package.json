@@ -1,0 +1,14 @@
+{
+  "name": "pixiel-salon",
+  "version": "1.0.0",
+  "main": "public/src/server.js",
+  "scripts": {
+    "start": "node public/src/server.js",
+    "init-db": "node -e \"require('./public/src/models/initDatabase')()\""
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

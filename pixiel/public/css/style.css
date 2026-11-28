@@ -1,46 +1,46 @@
 @font-face {
     font-family: 'strejen';
-    src: url(/public/fonts/AA\ Strejen.otf);
+    src: url(../fonts/AA\ Strejen.otf);
 }
 
 @font-face {
     font-family: 'synkopy';
-    src: url(/public/fonts/Synkopy-Flipside.otf);
+    src: url(../fonts/Synkopy-Flipside.otf);
 }
 
 @font-face {
     font-family: 'denistina';
-    src: url(/public/fonts/denistina_en.ttf);
+    src: url(../fonts/denistina_en.ttf);
 }
 
 @font-face {
     font-family: 'montserrat-regular';
-    src: url(/public/fonts/Montserrat-Regular.ttf);
+    src: url(../fonts/Montserrat-Regular.ttf);
 }
 
 @font-face {
     font-family: 'guano';
-    src: url(/public/fonts/Guano\ Apes\ \(Rus\ by\ sherbackoffalex\).otf);
+    src: url(../fonts/Guano\ Apes\ \(Rus\ by\ sherbackoffalex\).otf);
 }
 
 @font-face {
     font-family: 'leropid-italic';
-    src: url(/public/fonts/Leporid-Italic.otf);
+    src: url(../fonts/Leporid-Italic.otf);
 }
 
 @font-face {
     font-family: 'leropid-regular';
-    src: url(/public/fonts/Leporid-Regular.otf);
+    src: url(../fonts/Leporid-Regular.otf);
 }
 
 @font-face {
     font-family: 'hastoe';
-    src: url(/public/fonts/hastoe.ttf);
+    src: url(../fonts/hastoe.ttf);
 }
 
 @font-face {
     font-family: 'montserrat-black';
-    src: url(/public/fonts/MontserratBlack.ttf);
+    src: url(../fonts/MontserratBlack.ttf);
 }
 
 * {
@@ -114,7 +114,7 @@ header {
 .heroBg {
     position: absolute;
     inset: 0;
-    background-image: url(/public/img/indexHeroBG.png);
+        background-image: url(../img/indexHeroBG.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -726,7 +726,7 @@ footer img {
 }
 
 .heroServices {
-    background-image: url(/public/img/heroServices.png);
+        background-image: url(../img/heroServices.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -868,7 +868,7 @@ footer {
 }
 
 .heroAbout {
-    background-image: url(/public/img/heroAbout.png);
+        background-image: url(../img/heroAbout.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -979,7 +979,7 @@ footer {
 }
 
 .whoWeAre {
-    background-image: url(/public/img/aboutBlockBG.png);
+        background-image: url(../img/aboutBlockBG.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1083,7 +1083,7 @@ footer {
 }
 
 .heroContacts {
-    background-image: url(/public/img/heroContacts.png);
+        background-image: url(../img/heroContacts.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
